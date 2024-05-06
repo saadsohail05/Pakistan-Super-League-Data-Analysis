@@ -32,7 +32,7 @@ def animate_loading(progress_bar, value=0):
 # Function to execute another script
 def execute_another_script():
     # Path to the script to be executed
-    script_path = r'C:\Users\SaadS\Desktop\Psl Data Analysis\Pakistan-Super-League-Data-Analysis\Pages\build\gui.py'
+    script_path = r'C:\Users\SaadS\Desktop\Psl Data Analysis\Pakistan-Super-League-Data-Analysis\Pages\build1\gui.py'
     window.destroy()  # Close the current window
     subprocess.Popen(['python', script_path])
 

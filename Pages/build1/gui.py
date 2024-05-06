@@ -18,10 +18,21 @@ def relative_to_assets(path: str) -> Path:
     return ASSETS_PATH / Path(path)
 
 
+# Create the Tkinter window
 window = Tk()
+window.title("Pakistan Super League Data Analysis")
+window.configure(bg="#000000")
 
-window.geometry("1280x720")
-window.configure(bg = "#282C35")
+# Calculate the center coordinates of the screen
+screen_width = window.winfo_screenwidth()
+screen_height = window.winfo_screenheight()
+window_width = 1280
+window_height = 720
+x = (screen_width // 2) - (window_width // 2)
+y = (screen_height // 2) - (window_height // 2) - 50  # Adjusting the y coordinate
+
+# Set the window size and position it a bit higher than the center of the screen
+window.geometry(f"{window_width}x{window_height}+{x}+{y}")
 
 
 canvas = Canvas(
@@ -38,8 +49,8 @@ canvas.place(x = 0, y = 0)
 image_image_1 = PhotoImage(
     file=relative_to_assets("image_1.png"))
 image_1 = canvas.create_image(
-    639.0,
-    97.0,
+    640.0,
+    62.0,
     image=image_image_1
 )
 
@@ -53,10 +64,10 @@ button_1 = Button(
     relief="flat"
 )
 button_1.place(
-    x=104.0,
-    y=231.0,
-    width=307.0,
-    height=88.0
+    x=92.0,
+    y=205.0,
+    width=502.40386962890625,
+    height=110.0
 )
 
 button_image_2 = PhotoImage(
@@ -69,10 +80,10 @@ button_2 = Button(
     relief="flat"
 )
 button_2.place(
-    x=463.0,
-    y=231.0,
-    width=393.0666809082031,
-    height=88.0
+    x=709.0,
+    y=205.0,
+    width=485.9223327636719,
+    height=110.0
 )
 
 button_image_3 = PhotoImage(
@@ -85,10 +96,10 @@ button_3 = Button(
     relief="flat"
 )
 button_3.place(
-    x=909.0,
-    y=231.0,
-    width=309.1891784667969,
-    height=88.0
+    x=82.0,
+    y=360.0,
+    width=510,
+    height=110.0
 )
 
 button_image_4 = PhotoImage(
@@ -101,10 +112,10 @@ button_4 = Button(
     relief="flat"
 )
 button_4.place(
-    x=344.0,
-    y=444.0,
-    width=296.0,
-    height=88.0
+    x=700.0,
+    y=360.0,
+    width=495.0,
+    height=110.0
 )
 
 button_image_5 = PhotoImage(
@@ -117,10 +128,10 @@ button_5 = Button(
     relief="flat"
 )
 button_5.place(
-    x=676.0,
-    y=444.0,
-    width=303.8933410644531,
-    height=88.0
+    x=299.0,
+    y=535.0,
+    width=680,
+    height=110.0
 )
 window.resizable(False, False)
 window.mainloop()
