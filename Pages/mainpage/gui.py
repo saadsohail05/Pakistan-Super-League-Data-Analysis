@@ -15,6 +15,11 @@ def run_gui_script():
     script_path = CURRENT_DIR.parent / "graphmenu" / "gui.py"
     subprocess.Popen(['python', str(script_path)])
     window.destroy()
+    
+def run_gui_script1():
+    script_path = CURRENT_DIR.parent / "probmenu" / "gui.py"
+    subprocess.Popen(['python', str(script_path)])
+    window.destroy()   
 
 
 # Create the Tkinter window
@@ -86,7 +91,7 @@ button_3 = Button(
     image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_3 clicked"),
+    command=run_gui_script1,
     relief="flat"
 )
 button_3.place(
