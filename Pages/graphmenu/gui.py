@@ -20,7 +20,11 @@ def run_gui_script1():
     script_path = CURRENT_DIR.parent / "bargraphmenu" / "gui.py"
     subprocess.Popen(['python', str(script_path)])
     window.destroy()
-
+    
+def run_gui_script2():
+    script_path = CURRENT_DIR.parent / "linechartmenu" / "gui.py"
+    subprocess.Popen(['python', str(script_path)])
+    window.destroy()
 # Create the Tkinter window
 window = Tk()
 window.title("Pakistan Super League Data Analysis")
@@ -105,7 +109,7 @@ button_4 = Button(
     image=button_image_4,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_4 clicked"),
+    command=run_gui_script2,
     relief="flat"
 )
 button_4.place(
