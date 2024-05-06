@@ -15,13 +15,19 @@ def plot_top_5_batters(season):
     X = top_5_batters.index.tolist()
     Y = top_5_batters.values.tolist()
     
+    plt.figure(figsize=(12.8, 7.2))  # 1280x720 pixels
+      # Center the plot window on the screen
+    manager = plt.get_current_fig_manager()
+    manager.window.wm_geometry("+{}+{}".format(320, 130))
+   
+
     plt.bar(X, Y, color='g')
     plt.title("Top 5 Batters in Season {}".format(season))
     plt.xlabel("Batter")
     plt.ylabel("Total Runs")
     
     plt.xticks(rotation=12)
-    
+  
     plt.show()
 
 # Take input for the season

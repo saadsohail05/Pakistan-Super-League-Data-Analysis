@@ -10,7 +10,10 @@ boundary_data = data[data['Total Runs'].isin([4, 6])]
 
 # Group data by season and count the number of boundaries for each season
 season_boundary_counts = boundary_data.groupby('season').size().reset_index(name='Boundary Count')
-
+plt.figure(figsize=(12.8, 7.2))  # 1280x720 pixels
+      # Center the plot window on the screen
+manager = plt.get_current_fig_manager()
+manager.window.wm_geometry("+{}+{}".format(320, 130))
 # Extract X and Y values
 X = season_boundary_counts['season']
 Y = season_boundary_counts['Boundary Count']

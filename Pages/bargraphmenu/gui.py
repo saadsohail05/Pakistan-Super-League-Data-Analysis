@@ -31,6 +31,7 @@ window_width = 1280
 window_height = 720
 x = (screen_width // 2) - (window_width // 2)
 y = (screen_height // 2) - (window_height // 2) - 50  # Adjusting the y coordinate
+print(x, y)
 
 # Set the window size and position it a bit higher than the center of the screen
 window.geometry(f"{window_width}x{window_height}+{x}+{y}")
@@ -38,6 +39,20 @@ def run_gui_script():
     script_path = CURRENT_DIR.parent / "graphmenu" / "gui.py"
     subprocess.Popen(['python', str(script_path)])
     window.destroy()
+    
+def run_gui_script1():
+    script_path = CURRENT_DIR.parent.parent / "Barchart" / "Bar-Chart(1).py"
+    subprocess.Popen(['python', str(script_path)])
+def run_gui_script2():
+    script_path = CURRENT_DIR.parent.parent / "Barchart" / "Bar-Chart(2).py"
+    subprocess.Popen(['python', str(script_path)])
+def run_gui_script3():
+    script_path = CURRENT_DIR.parent.parent / "Barchart" / "Bar-Chart(3).py"
+    subprocess.Popen(['python', str(script_path)])
+def run_gui_script4():
+    script_path = CURRENT_DIR.parent.parent / "Barchart" / "Bar-Chart(4).py"
+    subprocess.Popen(['python', str(script_path)])
+   
 
 canvas = Canvas(
     window,
@@ -80,7 +95,7 @@ button_2 = Button(
     image=button_image_2,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_2 clicked"),
+    command=run_gui_script1,
     relief="flat"
 )
 button_2.place(
@@ -96,7 +111,7 @@ button_3 = Button(
     image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_3 clicked"),
+    command=run_gui_script2,
     relief="flat"
 )
 button_3.place(
@@ -112,7 +127,7 @@ button_4 = Button(
     image=button_image_4,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_4 clicked"),
+    command=run_gui_script3,
     relief="flat"
 )
 button_4.place(
@@ -128,7 +143,7 @@ button_5 = Button(
     image=button_image_5,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_5 clicked"),
+    command=run_gui_script4,
     relief="flat"
 )
 button_5.place(

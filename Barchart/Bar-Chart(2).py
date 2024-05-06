@@ -13,6 +13,10 @@ def plot_top_bowlers_by_season(season):
 
     X = top_5_bowlers.index.tolist()
     Y = top_5_bowlers.values.tolist()
+    plt.figure(figsize=(12.8, 7.2))  # 1280x720 pixels
+      # Center the plot window on the screen
+    manager = plt.get_current_fig_manager()
+    manager.window.wm_geometry("+{}+{}".format(320, 130))
 
     plt.bar(X, Y, color='b')
     plt.title(f"Top 5 Bowlers in PSL Season {season}")
