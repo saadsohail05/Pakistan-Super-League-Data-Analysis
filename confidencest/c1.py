@@ -48,6 +48,7 @@ std_error_intercept = std_residuals * np.sqrt(1 / len(X) + (mean_X ** 2) / varia
 intercept_lower_bound = intercept - t_critical * std_error_intercept
 intercept_upper_bound = intercept + t_critical * std_error_intercept
 
+
 # Plotting the regression line with confidence intervals
 plt.figure(figsize=(12, 7))
 plt.scatter(X, Y, color='blue', alpha=0.7, edgecolors="k", label='Data Points')
