@@ -17,7 +17,7 @@ colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e3
 plt.figure(figsize=(12.8, 7.2))  # 1280x720 pixels
       # Center the plot window on the screen
 manager = plt.get_current_fig_manager()
-manager.window.wm_geometry("+{}+{}".format(320, 130))
+manager.window.wm_geometry("+{}+{}".format(128, 22))
 patches, texts, autotexts = plt.pie(venue_counts, labels=None, autopct='%1.1f%%', startangle=140, colors=colors, textprops={'fontsize': 12})
 plt.title('Distribution of Matches Held at Different Venues', fontsize=18, fontweight='bold', pad=20)
 plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.

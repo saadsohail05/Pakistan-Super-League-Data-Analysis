@@ -29,7 +29,7 @@ colors = ['#ff9999', '#66b3ff', '#99ff99', '#ffcc99']
 plt.figure(figsize=(12.8, 7.2))  # 1280x720 pixels
       # Center the plot window on the screen
 manager = plt.get_current_fig_manager()
-manager.window.wm_geometry("+{}+{}".format(320, 130))
+manager.window.wm_geometry("+{}+{}".format(128, 22))
 plt.pie(seasons_won_count, labels=seasons_won_count.index, autopct='%1.1f%%', startangle=140, colors=colors, shadow=True)
 plt.title('PSL Seasons Won by Teams', fontsize=25, fontweight='bold',pad=20)
 plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.

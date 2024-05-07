@@ -14,7 +14,7 @@ most_toss_winner = toss_winner_counts.idxmax()
 plt.figure(figsize=(12.8, 7.2))  # 1280x720 pixels
       # Center the plot window on the screen
 manager = plt.get_current_fig_manager()
-manager.window.wm_geometry("+{}+{}".format(320, 130))
+manager.window.wm_geometry("+{}+{}".format(128, 22))
 plt.pie(toss_winner_counts, labels=toss_winner_counts.index, autopct='%1.1f%%', startangle=140)
 plt.title('Teams with Most Toss Wins', fontsize=16, fontweight='bold', pad=20)
 plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.

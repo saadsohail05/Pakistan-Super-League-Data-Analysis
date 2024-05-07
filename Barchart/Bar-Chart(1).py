@@ -18,7 +18,7 @@ def plot_top_5_batters(season):
     plt.figure(figsize=(12.8, 7.2))  # 1280x720 pixels
       # Center the plot window on the screen
     manager = plt.get_current_fig_manager()
-    manager.window.wm_geometry("+{}+{}".format(320, 130))
+    manager.window.wm_geometry("+{}+{}".format(128, 22))
    
 
     plt.bar(X, Y, color='g')

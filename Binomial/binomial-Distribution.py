@@ -41,7 +41,7 @@ pmf = binom.pmf(k_values, n, p)
 plt.figure(figsize=(12.8, 7.2))  # 1280x720 pixels
       # Center the plot window on the screen
 manager = plt.get_current_fig_manager()
-manager.window.wm_geometry("+{}+{}".format(320, 130))
+manager.window.wm_geometry("+{}+{}".format(128, 22))
 plt.bar(k_values, pmf)  
 plt.xlabel('Number of Match Win when Toss win')  
 plt.ylabel('Probability')  

@@ -47,8 +47,8 @@ window_width = 1280
 window_height = 720
 x = (screen_width // 2) - (window_width // 2)
 y = (screen_height // 2) - (window_height // 2) - 50  # Adjusting the y coordinate
-
 # Set the window size and position it a bit higher than the center of the screen
+print(x,y)
 window.geometry(f"{window_width}x{window_height}+{x}+{y}")
 
 # Create canvas

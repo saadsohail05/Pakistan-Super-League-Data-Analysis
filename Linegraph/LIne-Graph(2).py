@@ -25,7 +25,7 @@ season_dot_balls_percentage['Dot Balls Percentage'] = (season_dot_balls_percenta
 plt.figure(figsize=(12.8, 7.2))  # 1280x720 pixels
     # Center the plot window on the screen
 manager = plt.get_current_fig_manager()
-manager.window.wm_geometry("+{}+{}".format(320, 130))
+manager.window.wm_geometry("+{}+{}".format(128, 22))
 plt.plot(season_dot_balls_percentage["season"], season_dot_balls_percentage["Dot Balls Percentage"], marker='o', color='blue')
 plt.title("Dot Balls Percentage per Season")
 plt.xlabel("Season")

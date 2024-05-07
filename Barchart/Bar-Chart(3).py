@@ -13,7 +13,7 @@ season_boundary_counts = boundary_data.groupby('season').size().reset_index(name
 plt.figure(figsize=(12.8, 7.2))  # 1280x720 pixels
       # Center the plot window on the screen
 manager = plt.get_current_fig_manager()
-manager.window.wm_geometry("+{}+{}".format(320, 130))
+manager.window.wm_geometry("+{}+{}".format(128, 22))
 # Extract X and Y values
 X = season_boundary_counts['season']
 Y = season_boundary_counts['Boundary Count']

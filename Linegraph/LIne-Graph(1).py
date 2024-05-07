@@ -25,7 +25,7 @@ season_data["Average Boundaries per Match"] = season_data["Total Boundaries"] / 
 plt.figure(figsize=(12.8, 7.2))  # 1280x720 pixels
     # Center the plot window on the screen
 manager = plt.get_current_fig_manager()
-manager.window.wm_geometry("+{}+{}".format(320, 130))
+manager.window.wm_geometry("+{}+{}".format(128, 22))
 plt.plot(season_data["season"], season_data["Average Boundaries per Match"], marker='o', color='green')
 plt.title("Average Boundaries per Match per Season")
 plt.xlabel("Season")
