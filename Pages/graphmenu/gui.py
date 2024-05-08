@@ -29,8 +29,13 @@ def run_gui_script3():
     script_path = CURRENT_DIR.parent / "histogrammenu" / "gui.py"
     subprocess.Popen(['python', str(script_path)])
     window.destroy()
-def run_gui_script3():
+def run_gui_script4():
     script_path = CURRENT_DIR.parent / "fpmenu" / "gui.py"
+    subprocess.Popen(['python', str(script_path)])
+    window.destroy()
+    
+def run_gui_script5():
+    script_path = CURRENT_DIR.parent / "piemenu" / "gui.py"
     subprocess.Popen(['python', str(script_path)])
     window.destroy()
 # Create the Tkinter window
@@ -87,7 +92,7 @@ button_2 = Button(
     image=button_image_2,
     borderwidth=0,
     highlightthickness=0,
-    command=run_gui_script3,
+    command=run_gui_script4,
     relief="flat"
 )
 button_2.place(
@@ -132,7 +137,7 @@ button_5 = Button(
     image=button_image_5,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_5 clicked"),
+    command=run_gui_script5,
     relief="flat"
 )
 button_5.place(
