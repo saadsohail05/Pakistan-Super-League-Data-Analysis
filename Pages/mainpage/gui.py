@@ -24,7 +24,12 @@ def run_gui_script1():
 def run_gui_script2():
     script_path = CURRENT_DIR.parent / "descmenu" / "gui.py"
     subprocess.Popen(['python', str(script_path)])
-    window.destroy()   
+    window.destroy()  
+    
+def run_gui_script3():
+    script_path = CURRENT_DIR.parent / "regmenu" / "gui.py"
+    subprocess.Popen(['python', str(script_path)])
+    window.destroy()  
 
 # Create the Tkinter window
 window = Tk()
@@ -125,7 +130,7 @@ button_5 = Button(
     image=button_image_5,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_5 clicked"),
+    command=run_gui_script3,
     relief="flat"
 )
 button_5.place(
