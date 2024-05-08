@@ -29,6 +29,10 @@ def run_gui_script3():
     script_path = CURRENT_DIR.parent / "histogrammenu" / "gui.py"
     subprocess.Popen(['python', str(script_path)])
     window.destroy()
+def run_gui_script3():
+    script_path = CURRENT_DIR.parent / "fpmenu" / "gui.py"
+    subprocess.Popen(['python', str(script_path)])
+    window.destroy()
 # Create the Tkinter window
 window = Tk()
 window.title("Pakistan Super League Data Analysis")
@@ -83,7 +87,7 @@ button_2 = Button(
     image=button_image_2,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_2 clicked"),
+    command=run_gui_script3,
     relief="flat"
 )
 button_2.place(

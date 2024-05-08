@@ -11,7 +11,10 @@ runs_per_over = data.groupby('Over Number')['Total Runs'].value_counts().unstack
 total_runs_per_over = runs_per_over.sum(axis=1)
 
 # Plotting the frequency polygon
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(12.8, 7.2))  # 1280x720 pixels
+      # Center the plot window on the screen
+manager = plt.get_current_fig_manager()
+manager.window.wm_geometry("+{}+{}".format(128, 22))
 plt.plot(total_runs_per_over.index, total_runs_per_over.values, marker='o', linestyle='-')
 plt.title('Frequency Polygon of Runs Made in Every Over in PSL')
 plt.xlabel('Over Number')

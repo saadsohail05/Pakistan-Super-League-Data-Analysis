@@ -11,7 +11,10 @@ dismissal_type_data = data[data['Wicket Type'] != '0']['Wicket Type']
 dismissal_type_frequency = dismissal_type_data.value_counts()
 
 # Plotting the frequency polygon
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(12.8, 7.2))  # 1280x720 pixels
+      # Center the plot window on the screen
+manager = plt.get_current_fig_manager()
+manager.window.wm_geometry("+{}+{}".format(128, 22))
 plt.plot(dismissal_type_frequency.index, dismissal_type_frequency.values, marker='o', linestyle='-')
 plt.title('Frequency Polygon of Dismissal Types in PSL')
 plt.xlabel('Dismissal Type')
