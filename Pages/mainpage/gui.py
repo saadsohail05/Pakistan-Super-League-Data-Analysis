@@ -20,7 +20,11 @@ def run_gui_script1():
     script_path = CURRENT_DIR.parent / "probmenu" / "gui.py"
     subprocess.Popen(['python', str(script_path)])
     window.destroy()   
-
+    
+def run_gui_script2():
+    script_path = CURRENT_DIR.parent / "descmenu" / "gui.py"
+    subprocess.Popen(['python', str(script_path)])
+    window.destroy()   
 
 # Create the Tkinter window
 window = Tk()
@@ -76,7 +80,7 @@ button_2 = Button(
     image=button_image_2,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_2 clicked"),
+    command=run_gui_script2,
     relief="flat"
 )
 button_2.place(
