@@ -35,7 +35,9 @@ x_positions = range(len(x_labels))
 # Plot each season's histogram as bars
 for idx, (season, freq_counts) in enumerate(frequency_data.items()):
     plt.bar([pos + idx * 0.1 for pos in x_positions], freq_counts, width=0.1, align='center', label=season)
-
+      # Center the plot window on the screen
+manager = plt.get_current_fig_manager()
+manager.window.wm_geometry("+{}+{}".format(128, 22))
 plt.xlabel('Wickets per Match')
 plt.ylabel('Frequency')
 plt.title('Wickets per Season Histogram')
