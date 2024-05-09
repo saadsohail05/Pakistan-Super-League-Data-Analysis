@@ -104,26 +104,13 @@ button_3 = Button(
     relief="flat"
 )
 button_3.place(
-    x=82.0,
+    x=380.0,
     y=360.0,
     width=510,
     height=110.0
 )
 
-button_image_4 = PhotoImage(file=relative_to_assets("button_4.png"))
-button_4 = Button(
-    image=button_image_4,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_4 clicked"),
-    relief="flat"
-)
-button_4.place(
-    x=700.0,
-    y=360.0,
-    width=495.0,
-    height=110.0
-)
+
 
 button_image_5 = PhotoImage(file=relative_to_assets("button_5.png"))
 button_5 = Button(
